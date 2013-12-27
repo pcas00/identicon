@@ -1,12 +1,30 @@
 <html>
 <head>
 	<title>Flask Identicon</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename='js/jquery.identicon5.js') }}"></script>
+	<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
 
 	<h1>Identicon</h2>
 	<p>Your IP Address is {{ ip_address }}</p>
+	<div>
+		<h2>Javascript Library</h2>
+		<ul>
+			<li>{{ hashed_ip }}</li>
+		</ul>
+	</div>
+	<div>
+		<h2>Gravatar.com Identicon</h2>
+		<img src="http://www.gravatar.com/avatar/{{ hashed_ip }}?d=identicon&f=y">
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function () {		
+			$('li').identicon5({size:80});			
+		});        
+	</script>
 
 </body>
 
