@@ -2,10 +2,10 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function() {
+var identiconControllers = angular.module('identiconControllers', []);
 
-  }])
-  .controller('MyCtrl2', [function() {
-
-  }]);
+identiconControllers.controller('IdenticonCtrl', function ($scope, $http) {
+	$http.get('hash').success(function(data) {
+		$scope.hash = data;
+	});
+});
