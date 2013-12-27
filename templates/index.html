@@ -1,5 +1,55 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="static/css/app.css"/>
+  <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="static/css/starter-template.css"/>
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Identicon</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Normal</a></li>
+            <li><a href="#about">Gravatar</a></li>
+            <li><a href="#contact">Generate</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+  </div>
+  <div ng-view></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  -->
+  <script src="static/lib/angular/angular.js"></script>
+  <script src="static/lib/angular/angular-route.js"></script>
+  <script src="static/js/app.js"></script>
+  <script src="static/js/services.js"></script>
+  <script src="static/js/controllers.js"></script>
+  <script src="static/js/filters.js"></script>
+  <script src="static/js/directives.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="static/lib/bootstrap/bootstrap.min.js"></script>
+  <script src="static/lib/identicon/jquery.identicon5.js"></script>
+</body>
+</html>
+
+<!--
 <html>
 <head>
+
 	<title>Flask Identicon</title>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="{{ url_for('static', filename='js/jquery.identicon5.js') }}"></script>
@@ -28,4 +78,4 @@
 
 </body>
 
-</html>
+</html>-->
