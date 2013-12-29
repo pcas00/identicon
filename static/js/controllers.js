@@ -9,3 +9,12 @@ identiconControllers.controller('IdenticonCtrl', function ($scope, $http) {
 		$scope.hash = data;
 	});
 });
+
+identiconControllers.controller('GenerateIdenticonCtrl', function ($scope, $http) {
+	/*$http.get('hash').success(function(data) {
+		$scope.hash = data;
+	});*/
+	$scope.ipAddress = '';
+	$scope.hash = '';
+
+});
