@@ -2,11 +2,9 @@
 
 /* Directives */
 
-/*
-angular.module('identiconApp.directives', []).
-  directive('appVersion', ['version', function(version) {
+angular.module('identiconDirectives', []).
+  directive('identiconDisplay', function() {
     return function(scope, elm, attrs) {
-      elm.text(version);
+      angular.element(elm).identicon5({size:80});
     };
-  }]);
-*/
+  });

@@ -4,7 +4,8 @@
 
 var identiconApp = angular.module('identiconApp', [
 	'ngRoute',
-	'identiconControllers'
+	'identiconControllers',
+	'identiconDirectives'
 ]);
 
 
