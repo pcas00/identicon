@@ -2,19 +2,21 @@
 
 /* jasmine specs for directives go here */
 
-/*describe('directives', function() {
-  beforeEach(module('myApp.directives'));
+/*
+describe('directives', function() {
 
-  describe('app-version', function() {
-    it('should print current version', function() {
-      module(function($provide) {
-        $provide.value('version', 'TEST_VER');
-      });
+  beforeEach(module('identiconDirectives'));
+
+  describe('identicon-display', function() {
+    
+    it('should display identicon jquery', function() {
       inject(function($compile, $rootScope) {
-        var element = $compile('<span app-version></span>')($rootScope);
-        expect(element.text()).toEqual('TEST_VER');
+        var element = $compile('<li identicon-display></li>')($rootScope);
+        expect(element.html()).toEqual('<canvas width="100" height="100"></canvas>');
       });
     });
+
   });
+
 });
 */

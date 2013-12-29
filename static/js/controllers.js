@@ -11,10 +11,13 @@ identiconControllers.controller('IdenticonCtrl', function ($scope, $http) {
 });
 
 identiconControllers.controller('GenerateIdenticonCtrl', function ($scope, $http) {
-	/*$http.get('hash').success(function(data) {
-		$scope.hash = data;
-	});*/
-	$scope.ipAddress = '';
-	$scope.hash = '';
+	//$scope.ipAddress = '';
+	//$scope.hash = '';
+
+	$scope.generateIdenticon = function(ipAddress) {
+		$http.get('customhash?ipAddress='+ipAddress).success(function(data) {
+			$scope.hash = data.hash;
+		});
+	}
 
 });
