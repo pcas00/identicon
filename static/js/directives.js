@@ -4,7 +4,9 @@
 
 angular.module('identiconDirectives', []).
   directive('identiconDisplay', function() {
-    return function(scope, elm, attrs) {
-    	angular.element(elm).identicon5({size:100});
-    }
+    return {
+    	link: function(scope, elm, attrs, ngModel) {
+    		angular.element(elm).identicon5({size:100});
+    	}
+    };
   });
