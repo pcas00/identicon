@@ -12,7 +12,7 @@ angular.module('identiconDirectives', []).
     		*/
     		$timeout(function() {
     			angular.element(elm).identicon5({size:100});
-    		}, 100);
+    		}, 150);
     	}
     };
   });
