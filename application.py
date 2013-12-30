@@ -10,13 +10,6 @@ application.debug = True
 def index():
 	return make_response(open('templates/index.html').read())
 
-"""@application.route('/')
-def index():
-	m = hashlib.md5()
-	m.update(request.remote_addr)
-	hashed_ip = m.hexdigest()
-	return render_template('index.html', ip_address = request.remote_addr, hashed_ip  = hashed_ip)"""
-
 @application.route('/hash')
 def get_hash():
 	m = hashlib.md5()
