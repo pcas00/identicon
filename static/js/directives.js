@@ -5,14 +5,17 @@
 angular.module('identiconDirectives', []).
   directive('identiconDisplay', function($timeout) {
     return {
+    	restrict: 'A',
     	link: function(scope, elm, attrs) {
-    		/*I think I need to timeout in order for Angular to compile HTML.
-    		Without the timeout, the identicon5 jQuery will generate an identicon
-    		for a blank hash.
+    		/*Watch for changes to hash model in scope and
+    		  change identicon.
     		*/
-    		$timeout(function() {
-    			angular.element(elm).identicon5({size:100});
-    		}, 150);
+    		scope.$watch('hash', function(newVal, oldVal) {
+    			if (newVal != oldVal) {
+    				elm.identicon5({size:100, hash:newVal});
+    			}
+ 
+    		});
     	}
     };
   });

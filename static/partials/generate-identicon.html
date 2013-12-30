@@ -6,6 +6,9 @@
       		IP Address: <input type="text" ng-model="ipAddress" />
       		<button ng-click="generateIdenticon(ipAddress)">Generate Identicon</button>
     	</form>
+      <ul>
+        <li identicon-display ng-show="hash" id="{{ hash }}">{{ hash }}</li>
+      </ul>
     	<img ng-show="hash" ng-src="http://www.gravatar.com/avatar/{{hash}}?d=identicon&f=y&s=100">
     	<pre>IP: {{ ipAddress }}</pre>
     	<pre>Hash: {{ hash }}</pre>

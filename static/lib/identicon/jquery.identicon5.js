@@ -23,7 +23,7 @@ Usage with options: $('li').identicon5({rotate:true, size:100});
 */
 (function ($) {
     $.fn.identicon5 = function (options) {
-	
+	       
 		// default options
 		 settings = jQuery.extend(
 		 { rotate: true, size:32 }, options);
@@ -445,8 +445,15 @@ Usage with options: $('li').identicon5({rotate:true, size:100});
 
         // return the object back to the chained call flow
         return this.each(function () {
-		
-			var hash = $(this).html();						
+		  
+			//var hash = $(this).html();
+            var hash = options.hash;
+            
+            if (!hash) {
+                hash = "test";
+            }	
+
+            console.log("Hash is " + hash);					
 			var canvas = document.createElement('canvas');			
 									
             if (canvas.getContext) {
