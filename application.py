@@ -22,7 +22,7 @@ def get_hash():
 	m = hashlib.md5()
 	m.update(request.remote_addr)
 	hashed_ip = m.hexdigest()
-	return make_response(json.dumps({'hash' : hashed_ip}))
+	return make_response(json.dumps({'hash' : hashed_ip, 'ipAddress' : request.remote_addr}))
 
 @application.route('/customhash')
 def post_hash():
